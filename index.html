@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Felipe Farias Santana | Engenheiro Civil & Especialista em Planejamento e BI</title>
+  <meta name="description" content="Portfólio executivo de Felipe Farias Santana - Engenheiro Civil (CREA 151832597-1PA), M.Eng em Engenharia de Planejamento & BI, MBA Gestão de Projetos USP/ESALQ. Especialista em megaprojetos de mineração e infraestrutura.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#070a13',
+              slate: '#0f172a',
+              amber: '#f59e0b',
+              gold: '#fbbf24',
+              cyan: '#06b6d4',
+              teal: '#14b8a6'
+            }
+          },
+          fontFamily: {
+            heading: ['Outfit', 'sans-serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Chart.js for S-Curve Analytics -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-blueprint-grid min-h-screen text-slate-200 antialiased relative selection:bg-amber-500 selection:text-black">
+
+  <!-- Ambient Light Orbs -->
+  <div class="fixed top-0 left-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none -z-10 animate-pulse-slow"></div>
+  <div class="fixed top-1/3 right-10 w-[30rem] h-[30rem] bg-cyan-500/10 rounded-full blur-3xl pointer-events-none -z-10 animate-pulse-slow" style="animation-delay: -4s;"></div>
+  <div class="fixed bottom-10 left-10 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+
+  <!-- Scanline subtle tech effect -->
+  <div class="scanline-effect"></div>
+
+  <!-- Top Credential Ribbon -->
+  <header class="w-full bg-slate-950/90 border-b border-slate-800/80 backdrop-blur-md sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex items-center justify-between text-xs font-mono">
+      <div class="flex items-center gap-3 overflow-x-auto whitespace-nowrap">
+        <span class="flex items-center gap-1.5 text-amber-400 font-semibold">
+          <i class="fas fa-certificate text-[11px]"></i>
+          <span>CREA 151832597-1PA</span>
+        </span>
+        <span class="text-slate-600">|</span>
+        <span class="flex items-center gap-1 text-slate-300">
+          <i class="fas fa-map-marker-alt text-amber-400/80 text-[11px]"></i>
+          <span>Parauapebas / Canaã dos Carajás - PA</span>
+        </span>
+        <span class="hidden sm:inline text-slate-600">|</span>
+        <span class="hidden sm:flex items-center gap-1 text-cyan-400">
+          <i class="fas fa-plane-departure text-[11px]"></i>
+          <span>Disponível para Viagens / Mobilidade Total</span>
+        </span>
+      </div>
+
+      <!-- Quick Actions (Theme, Lang & Print) -->
+      <div class="flex items-center gap-2.5 shrink-0">
+        <!-- Theme Switcher Button (Dark / Light) -->
+        <button id="theme-toggle-btn" class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-slate-800 text-amber-400 border border-slate-700 hover:border-amber-500/60 transition-all cursor-pointer text-xs font-mono font-bold" title="Alternar Modo Noturno / Diurno">
+          <i class="fas fa-sun text-xs text-amber-400"></i>
+          <span class="theme-label hidden sm:inline">Diurno</span>
+        </button>
+
+        <!-- Language Switcher Button -->
+        <button id="lang-toggle-btn" class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-slate-800 text-amber-400 border border-slate-700 hover:border-amber-500/60 transition-all cursor-pointer text-xs font-mono font-bold" title="Mudar idioma / Change language">
+          <i class="fas fa-globe"></i>
+          <span class="lang-label">PT</span>
+        </button>
+
+        <!-- Print Resume Button -->
+        <button onclick="window.print()" class="hidden md:flex items-center gap-1.5 px-2.5 py-1 rounded bg-slate-800 text-slate-300 hover:text-white border border-slate-700 hover:border-slate-500 transition-all cursor-pointer text-xs font-mono" title="Imprimir / Salvar como PDF">
+          <i class="fas fa-print"></i>
+          <span data-i18n="btnDownloadCV">Imprimir PDF</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Navigation Bar -->
+  <nav class="w-full bg-slate-900/80 border-b border-slate-800/60 backdrop-blur-xl sticky top-[41px] z-30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
+      <!-- Logo / Monogram -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 via-amber-600 to-amber-700 flex items-center justify-center font-heading font-black text-black text-xl shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform duration-200">
+          FS
+        </div>
+        <div>
+          <span class="block font-heading font-bold text-base text-white tracking-wide group-hover:text-amber-400 transition-colors">
+            Felipe Farias Santana
+          </span>
+          <span class="block text-[11px] font-mono text-cyan-400 tracking-wider">
+            Engenheiro de Planejamento & BI
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <div class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-300">
+        <a href="#sobre" class="hover:text-amber-400 transition-colors" data-i18n="navAbout">Sobre</a>
+        <a href="#experiencias" class="hover:text-amber-400 transition-colors" data-i18n="navExperiences">Experiências</a>
+        <a href="#curva-s-simulator" class="hover:text-amber-400 transition-colors" data-i18n="navCurveS">Simulador Curva S</a>
+        <a href="#eap-section" class="hover:text-amber-400 transition-colors">EAP & NDT</a>
+        <a href="#habilidades" class="hover:text-amber-400 transition-colors" data-i18n="navSkills">Competências</a>
+        <a href="#formacao" class="hover:text-amber-400 transition-colors" data-i18n="navEducation">Formação</a>
+      </div>
+
+      <!-- Action Button -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a id="hero-whatsapp-btn" href="https://wa.me/5593991515807" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-semibold text-xs tracking-wider uppercase font-mono shadow-lg shadow-amber-500/20 hover:shadow-amber-500/40 transition-all duration-200">
+          <i class="fab fa-whatsapp text-sm"></i>
+          <span data-i18n="btnWhatsApp">WhatsApp</span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg bg-slate-800 text-slate-300 hover:text-white border border-slate-700">
+        <i class="fas fa-bars text-lg"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-800 bg-slate-950/95 px-4 py-4 space-y-3 font-medium text-sm">
+      <a href="#sobre" class="block py-1 hover:text-amber-400" data-i18n="navAbout">Sobre</a>
+      <a href="#experiencias" class="block py-1 hover:text-amber-400" data-i18n="navExperiences">Experiências</a>
+      <a href="#curva-s-simulator" class="block py-1 hover:text-amber-400" data-i18n="navCurveS">Simulador Curva S</a>
+      <a href="#eap-section" class="block py-1 hover:text-amber-400">EAP & Ensaios NDT</a>
+      <a href="#habilidades" class="block py-1 hover:text-amber-400" data-i18n="navSkills">Competências</a>
+      <a href="#formacao" class="block py-1 hover:text-amber-400" data-i18n="navEducation">Formação</a>
+      <a href="#contato" class="block py-1 hover:text-amber-400" data-i18n="navContact">Contato</a>
+      <div class="pt-3 border-t border-slate-800 flex items-center justify-between">
+        <span class="text-xs text-slate-400 font-mono">Tema Visual:</span>
+        <button id="mobile-theme-toggle-btn" class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-800 text-amber-400 border border-slate-700 text-xs font-mono font-bold cursor-pointer">
+          <i class="fas fa-sun text-xs text-amber-400"></i>
+          <span class="theme-label">Diurno</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       HERO SECTION: High-Impact Executive Identity
+       ========================================================================= -->
+  <section class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Top Status Badge -->
+      <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-slate-900/90 border border-amber-500/30 text-amber-400 text-xs font-mono mb-8 shadow-inner">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+        <span class="font-bold tracking-wide" data-i18n="heroBadge">CREA 151832597-1PA • Parauapebas & Canaã dos Carajás, PA</span>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-8 space-y-6">
+          <h1 class="font-heading font-black text-4xl sm:text-5xl md:text-6xl text-white tracking-tight leading-[1.1]">
+            <span data-i18n="heroTitlePrefix">Engenheiro Civil &</span><br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 glow-amber" data-i18n="heroTitleHighlight">
+              Especialista em Planejamento e BI
+            </span>
+          </h1>
+
+          <p class="text-base sm:text-lg md:text-xl text-slate-300 leading-relaxed font-normal max-w-3xl" data-i18n="heroSubtitle">
+            Profissional de alta performance com sólida bagagem nos maiores complexos de mineração e infraestrutura industrial do país (Carajás, S11D, Salobo III, Onça Puma e Sossego). Domínio avançado em Curva S, EAP, MS Project, Power BI, medições contratuais e ensaios tecnológicos (NDT).
+          </p>
+
+          <!-- Executive Project Pill Tags -->
+          <div class="flex flex-wrap items-center gap-2 pt-2">
+            <span class="text-xs font-mono uppercase tracking-wider text-slate-400 mr-2">Grandes Obras:</span>
+            <span class="px-3 py-1 rounded-lg bg-slate-900/80 border border-slate-800 text-xs font-mono text-cyan-300"><i class="fas fa-gem text-amber-400 mr-1.5"></i>Carajás (Vale)</span>
+            <span class="px-3 py-1 rounded-lg bg-slate-900/80 border border-slate-800 text-xs font-mono text-cyan-300"><i class="fas fa-gem text-amber-400 mr-1.5"></i>S11D Implantação</span>
+            <span class="px-3 py-1 rounded-lg bg-slate-900/80 border border-slate-800 text-xs font-mono text-cyan-300"><i class="fas fa-industry text-amber-400 mr-1.5"></i>Salobo III (Moagem & HPGR)</span>
+            <span class="px-3 py-1 rounded-lg bg-slate-900/80 border border-slate-800 text-xs font-mono text-cyan-300"><i class="fas fa-mountain text-amber-400 mr-1.5"></i>Onça Puma & Sossego</span>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap items-center gap-4 pt-4">
+            <a href="#experiencias" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-black font-bold text-sm uppercase tracking-wider font-mono shadow-lg shadow-amber-500/25 transition-all transform hover:-translate-y-0.5">
+              <span data-i18n="btnExplore">Ver Trajetória Executiva</span>
+              <i class="fas fa-arrow-down"></i>
+            </a>
+
+            <a href="#curva-s-simulator" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 hover:border-amber-500/40 font-semibold text-sm uppercase tracking-wider font-mono transition-all">
+              <i class="fas fa-chart-line text-cyan-400"></i>
+              <span data-i18n="btnCurveS">Simulador Curva "S"</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Visual Showcase / Engineering Monogram Card -->
+        <div class="lg:col-span-4">
+          <div class="glass-panel rounded-3xl p-6 sm:p-8 relative border border-slate-800/80 shadow-2xl relative">
+            <!-- Decorative CAD Blueprint Badge -->
+            <div class="flex items-center justify-between pb-6 border-b border-slate-800 text-xs font-mono text-slate-400">
+              <span class="flex items-center gap-1.5 text-amber-400">
+                <i class="fas fa-drafting-compass"></i>
+                <span>PROJECT CONTROLS & BI</span>
+              </span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">v2026.1</span>
+            </div>
+
+            <!-- Monogram & Identity -->
+            <div class="py-8 text-center">
+              <div class="w-24 h-24 mx-auto rounded-2xl bg-gradient-to-tr from-slate-900 via-slate-800 to-amber-500/20 border-2 border-amber-500/50 flex items-center justify-center mb-4 relative shadow-xl">
+                <span class="font-heading font-black text-3xl text-amber-400 tracking-wider">FS</span>
+                <div class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-emerald-500 border-2 border-slate-900"></div>
+              </div>
+              <h3 class="font-heading font-bold text-xl text-white">Felipe Farias Santana</h3>
+              <p class="text-sm text-slate-400 font-mono mt-1">CREA 151832597-1PA</p>
+              <p class="text-xs text-amber-400/90 font-mono mt-0.5">CNH Categoria AB • Solteiro</p>
+            </div>
+
+            <!-- Quick Stats in Card -->
+            <div class="space-y-3 pt-4 border-t border-slate-800 text-xs font-mono">
+              <div class="flex justify-between items-center text-slate-300">
+                <span class="text-slate-400"><i class="fas fa-graduation-cap text-amber-400 mr-2"></i>Pós-Graduação:</span>
+                <span class="text-white font-bold">M.Eng PUC & MBA USP</span>
+              </div>
+              <div class="flex justify-between items-center text-slate-300">
+                <span class="text-slate-400"><i class="fas fa-layer-group text-cyan-400 mr-2"></i>Especialidade:</span>
+                <span class="text-cyan-400 font-bold">Curva S & EAP / PERT</span>
+              </div>
+              <div class="flex justify-between items-center text-slate-300">
+                <span class="text-slate-400"><i class="fas fa-tools text-amber-400 mr-2"></i>Controle Tecnológico:</span>
+                <span class="text-slate-200">NDT Concreto (HPGR)</span>
+              </div>
+            </div>
+
+            <!-- Fast Contact Button in Card -->
+            <div class="mt-6 pt-4 border-t border-slate-800/80">
+              <button id="copy-email-btn" class="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700/80 text-amber-400 font-mono text-xs font-bold border border-slate-700/60 transition-colors">
+                <i class="fas fa-copy"></i>
+                <span>felipe.engmdc@gmail.com</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KPI Metrics Strip -->
+      <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+        <div class="glass-panel p-5 rounded-2xl border border-slate-800/80">
+          <div class="text-3xl sm:text-4xl font-black font-heading text-amber-400 glow-amber">+5 Anos</div>
+          <div class="text-xs sm:text-sm text-slate-400 font-medium mt-1" data-i18n="heroStat1Label">Anos em Grandes Obras</div>
+        </div>
+
+        <div class="glass-panel p-5 rounded-2xl border border-slate-800/80">
+          <div class="text-3xl sm:text-4xl font-black font-heading text-cyan-400 glow-cyan">5+</div>
+          <div class="text-xs sm:text-sm text-slate-400 font-medium mt-1" data-i18n="heroStat2Label">Complexos Globais de Mineração</div>
+        </div>
+
+        <div class="glass-panel p-5 rounded-2xl border border-slate-800/80">
+          <div class="text-2xl sm:text-3xl font-black font-heading text-white">USP + PUC</div>
+          <div class="text-xs sm:text-sm text-slate-400 font-medium mt-1" data-i18n="heroStat3Label">M.Eng & MBA de Elite</div>
+        </div>
+
+        <div class="glass-panel p-5 rounded-2xl border border-slate-800/80">
+          <div class="text-3xl sm:text-4xl font-black font-heading text-amber-400">100%</div>
+          <div class="text-xs sm:text-sm text-slate-400 font-medium mt-1" data-i18n="heroStat4Label">Domínio em Curva S & BI</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       ABOUT & EXECUTIVE PRESENTATION
+       ========================================================================= -->
+  <section id="sobre" class="py-20 bg-slate-950/60 border-t border-b border-slate-800/60 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-mono font-bold text-amber-400 tracking-widest uppercase mb-2 block">
+          // DIRETRIZES TÉCNICAS & METODOLOGIA
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white tracking-tight" data-i18n="aboutHeading">
+          Apresentação Executiva & Filosofia de Gestão
+        </h2>
+        <div class="w-20 h-1 bg-gradient-to-r from-amber-500 to-cyan-500 mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Pillar 1: Gestão Multidisciplinar -->
+        <div class="glass-panel glass-panel-hover p-8 rounded-2xl border border-slate-800">
+          <div class="w-14 h-14 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-2xl mb-6">
+            <i class="fas fa-sitemap"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Gestão Multidisciplinar</h3>
+          <p class="text-sm text-slate-300 leading-relaxed" data-i18n="aboutParagraph1">
+            Acompanhamento e gestão de projetos de construção civil, hidráulica, elétrica, implantação e manutenção pesada, garantindo rigoroso controle e qualidade inegociável de entregáveis.
+          </p>
+        </div>
+
+        <!-- Pillar 2: Metodologias & Controle Rigoroso -->
+        <div class="glass-panel glass-panel-hover p-8 rounded-2xl border border-slate-800">
+          <div class="w-14 h-14 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-2xl mb-6">
+            <i class="fas fa-project-diagram"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Metodologias & Métricas</h3>
+          <p class="text-sm text-slate-300 leading-relaxed" data-i18n="aboutParagraph2">
+            Aplicação prática de metodologias ágeis e tradicionais, gestão de equipes, Ciclo PDCA, 5S, KPIs contratuais, elaboração de EAP com método PERT/CPM e análise de desempenho semanal e mensal.
+          </p>
+        </div>
+
+        <!-- Pillar 3: Programação e Histogramas -->
+        <div class="glass-panel glass-panel-hover p-8 rounded-2xl border border-slate-800">
+          <div class="w-14 h-14 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-2xl mb-6">
+            <i class="fas fa-stopwatch"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Programação & Histogramas</h3>
+          <p class="text-sm text-slate-300 leading-relaxed" data-i18n="aboutParagraph3">
+            Gerenciamento de recursos e mão de obra dentro dos prazos estabelecidos e marcos contratuais, desenvolvimento de programação diária e controle minucioso de equipes via histograma de HH e custo.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       EXPERIENCE SHOWCASE: The Core Timeline & Projects
+       ========================================================================= -->
+  <section id="experiencias" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <span class="text-xs font-mono font-bold text-amber-400 tracking-widest uppercase mb-2 block">
+            // TRAJETÓRIA COMPROVADA EM GRANDES OBRAS
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white tracking-tight">
+            Experiências Profissionais
+          </h2>
+          <p class="text-sm sm:text-base text-slate-400 mt-2 max-w-2xl">
+            Atuação de campo e corporativa em investimentos correntes e megaimplantações no setor mínero-metalúrgico e de infraestrutura pesada.
+          </p>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="flex flex-wrap items-center gap-2 font-mono text-xs">
+          <button data-filter="all" class="filter-btn px-3.5 py-2 rounded-xl bg-amber-500 text-black font-bold border border-amber-400 transition-all cursor-pointer" data-i18n="filterAll">
+            Todas as Experiências
+          </button>
+          <button data-filter="gestao" class="filter-btn px-3.5 py-2 rounded-xl bg-slate-800/80 text-slate-300 border border-slate-700/50 hover:border-amber-500/40 transition-all cursor-pointer" data-i18n="filterGestao">
+            Gestão & Planejamento
+          </button>
+          <button data-filter="campo" class="filter-btn px-3.5 py-2 rounded-xl bg-slate-800/80 text-slate-300 border border-slate-700/50 hover:border-amber-500/40 transition-all cursor-pointer" data-i18n="filterCampo">
+            Engenharia de Campo & NDT
+          </button>
+          <button data-filter="implantacao" class="filter-btn px-3.5 py-2 rounded-xl bg-slate-800/80 text-slate-300 border border-slate-700/50 hover:border-amber-500/40 transition-all cursor-pointer" data-i18n="filterImplantacao">
+            Grandes Implantações
+          </button>
+        </div>
+      </div>
+
+      <!-- Experiences Grid (Filled dynamically via app.js) -->
+      <div id="experiences-container" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Conteúdo inserido dinamicamente por JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       INTERACTIVE S-CURVE (CURVA S) & PROJECT CONTROLS SIMULATOR
+       ========================================================================= -->
+  <section id="curva-s-simulator" class="py-20 bg-slate-950/80 border-t border-b border-slate-800 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs font-mono font-bold text-cyan-400 tracking-widest uppercase mb-2 block">
+          // ENGENHARIA DE CONTROLE & EARNED VALUE MANAGEMENT
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white tracking-tight" data-i18n="simTitle">
+          Simulador Interativo de Curva "S" & Project Controls
+        </h2>
+        <p class="text-sm sm:text-base text-slate-400 mt-3 leading-relaxed" data-i18n="simSubtitle">
+          Demonstração em tempo real da metodologia analítica aplicada no acompanhamento de avanço físico, Earned Value (EVM) e previsão de marcos contratuais.
+        </p>
+      </div>
+
+      <!-- Simulation Dashboard Container -->
+      <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-slate-800 shadow-2xl">
+        
+        <!-- Scenario Switchers & Indicators -->
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-slate-800">
+          <div>
+            <span class="text-xs font-mono text-slate-400 uppercase tracking-wider block mb-2">Selecione o Cenário de Análise:</span>
+            <div class="flex flex-wrap gap-2.5 font-mono text-xs">
+              <button data-scenario="real" class="scenario-btn px-3.5 py-2 rounded-xl border border-amber-500 text-amber-400 bg-amber-500/10 font-bold transition-all cursor-pointer" data-i18n="simScenarioReal">
+                Cenário 1: Desempenho Real (SPI = 1.04)
+              </button>
+              <button data-scenario="delayed" class="scenario-btn px-3.5 py-2 rounded-xl border border-slate-700 text-slate-400 bg-slate-800/40 hover:border-slate-500 transition-all cursor-pointer" data-i18n="simScenarioDelayed">
+                Cenário 2: Desvio Identificado & Plano de Ação
+              </button>
+              <button data-scenario="financial" class="scenario-btn px-3.5 py-2 rounded-xl border border-slate-700 text-slate-400 bg-slate-800/40 hover:border-slate-500 transition-all cursor-pointer" data-i18n="simScenarioFinancial">
+                Cenário 3: Curva S Físico-Financeira & BMs
+              </button>
+            </div>
+          </div>
+
+          <!-- Dynamic KPIs -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 shrink-0 font-mono">
+            <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800 text-center">
+              <span class="text-[11px] text-slate-400 block" data-i18n="simMetricPV">Planejado (PV)</span>
+              <span id="metric-pv" class="text-xl font-bold text-slate-300">68.0%</span>
+            </div>
+            <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800 text-center">
+              <span class="text-[11px] text-slate-400 block" data-i18n="simMetricEV">Realizado (EV)</span>
+              <span id="metric-ev" class="text-xl font-bold text-amber-400">71.0%</span>
+            </div>
+            <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800 text-center">
+              <span class="text-[11px] text-slate-400 block" data-i18n="simMetricSPI">SPI (Prazo)</span>
+              <span id="metric-spi" class="text-xl font-bold text-emerald-400">1.04</span>
+            </div>
+            <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800 text-center">
+              <span class="text-[11px] text-slate-400 block" data-i18n="simMetricStatus">Status</span>
+              <span id="metric-status" class="text-xs font-semibold px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Adiantado</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chart Canvas -->
+        <div class="relative h-80 sm:h-96 mt-6">
+          <canvas id="curvaSChart"></canvas>
+        </div>
+
+        <!-- Methodology Insights Footer -->
+        <div class="mt-8 pt-6 border-t border-slate-800/80 grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-slate-300">
+          <div class="flex items-start gap-3">
+            <i class="fas fa-calendar-check text-amber-400 text-base mt-0.5"></i>
+            <div>
+              <strong class="text-white block font-heading text-sm">Linha de Base & Gestão de Prazos</strong>
+              Estabelecimento de marcos contratuais críticos no MS Project com rastreabilidade de caminho crítico (CPM).
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <i class="fas fa-file-invoice-dollar text-cyan-400 text-base mt-0.5"></i>
+            <div>
+              <strong class="text-white block font-heading text-sm">Boletins de Medição (BM) Auditáveis</strong>
+              Apropriação física e financeira semanal vinculada à planilha contratual de faturamento.
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <i class="fas fa-bolt text-emerald-400 text-base mt-0.5"></i>
+            <div>
+              <strong class="text-white block font-heading text-sm">Planos de Ação e Ciclo PDCA</strong>
+              Identificação imediata de desvios negativos com planos de recuperação e histograma reajustado.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       EAP / WBS & ENSAIOS NÃO DESTRUTIVOS (NDT)
+       ========================================================================= -->
+  <section id="eap-section" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Left: EAP / WBS Interactive Structure -->
+        <div class="lg:col-span-6 space-y-6">
+          <div>
+            <span class="text-xs font-mono font-bold text-amber-400 tracking-widest uppercase mb-2 block">
+              // HIERARQUIA & GOVERNANÇA DE PROJETOS
+            </span>
+            <h2 class="text-3xl font-heading font-bold text-white">
+              Estrutura Analítica do Projeto (EAP / WBS)
+            </h2>
+            <p class="text-sm text-slate-300 mt-2 leading-relaxed">
+              Como Felipe decompõe e gerencia megaprojetos industriais para garantir rastreabilidade de prazos, custos e escopo contratual.
+            </p>
+          </div>
+
+          <div class="glass-panel p-6 rounded-2xl border border-slate-800 font-mono text-xs space-y-3">
+            <!-- Node 1.0 -->
+            <div class="p-3 bg-slate-900/90 rounded-xl border border-amber-500/40 text-amber-400 font-bold flex items-center justify-between">
+              <span class="flex items-center gap-2">
+                <i class="fas fa-cube"></i>
+                <span>1.0 IMPLANTAÇÃO INDUSTRIAL / MINERAÇÃO</span>
+              </span>
+              <span class="text-[10px] bg-amber-500/20 px-2 py-0.5 rounded text-amber-300">Nível 1</span>
+            </div>
+
+            <!-- Node 1.1 -->
+            <div class="ml-4 p-3 bg-slate-900/70 rounded-xl border border-slate-800 text-slate-200">
+              <div class="flex items-center justify-between font-semibold">
+                <span class="flex items-center gap-2 text-cyan-300">
+                  <i class="fas fa-pencil-ruler"></i>
+                  <span>1.1 Engenharia de Detalhamento & Suprimentos</span>
+                </span>
+                <span class="text-[10px] bg-slate-800 px-2 py-0.5 rounded text-slate-400">Pacote 1</span>
+              </div>
+              <p class="text-[11px] text-slate-400 mt-1 font-sans">Leitura avançada de desenhos técnicos, especificações e interfaces com suprimentos.</p>
+            </div>
+
+            <!-- Node 1.2 -->
+            <div class="ml-4 p-3 bg-slate-900/70 rounded-xl border border-slate-800 text-slate-200">
+              <div class="flex items-center justify-between font-semibold">
+                <span class="flex items-center gap-2 text-amber-300">
+                  <i class="fas fa-hard-hat"></i>
+                  <span>1.2 Obras Civis & Estruturas Maciças</span>
+                </span>
+                <span class="text-[10px] bg-slate-800 px-2 py-0.5 rounded text-slate-400">Pacote 2</span>
+              </div>
+              <p class="text-[11px] text-slate-400 mt-1 font-sans">Terraplenagem, fundações especiais, blocos de HPGR e Moagem pesada com ensaios NDT.</p>
+            </div>
+
+            <!-- Node 1.3 -->
+            <div class="ml-4 p-3 bg-slate-900/70 rounded-xl border border-slate-800 text-slate-200">
+              <div class="flex items-center justify-between font-semibold">
+                <span class="flex items-center gap-2 text-emerald-300">
+                  <i class="fas fa-cogs"></i>
+                  <span>1.3 Montagem Eletromecânica & Tubulação</span>
+                </span>
+                <span class="text-[10px] bg-slate-800 px-2 py-0.5 rounded text-slate-400">Pacote 3</span>
+              </div>
+              <p class="text-[11px] text-slate-400 mt-1 font-sans">Controle de avanço de soldagem, alinhamento de moinhos, barramentos elétricos e instrumentação.</p>
+            </div>
+
+            <!-- Node 1.4 -->
+            <div class="ml-4 p-3 bg-slate-900/70 rounded-xl border border-slate-800 text-slate-200">
+              <div class="flex items-center justify-between font-semibold">
+                <span class="flex items-center gap-2 text-blue-300">
+                  <i class="fas fa-clipboard-check"></i>
+                  <span>1.4 Comissionamento, RDO & Boletins de Medição</span>
+                </span>
+                <span class="text-[10px] bg-slate-800 px-2 py-0.5 rounded text-slate-400">Pacote 4</span>
+              </div>
+              <p class="text-[11px] text-slate-400 mt-1 font-sans">Testes a vazio e com carga, elaboração de RDOs, encerramento de marcos e BMs contratuais.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: NDT (Ensaios Não-Destrutivos) -->
+        <div class="lg:col-span-6 space-y-6">
+          <div>
+            <span class="text-xs font-mono font-bold text-cyan-400 tracking-widest uppercase mb-2 block">
+              // ENGENHARIA DE CONTROLE TECNOLÓGICO (SALOBO III)
+            </span>
+            <h2 class="text-3xl font-heading font-bold text-white" data-i18n="ndtTitle">
+              Tecnologia Estrutural & Ensaios NDT
+            </h2>
+            <p class="text-sm text-slate-300 mt-2 leading-relaxed" data-i18n="ndtSubtitle">
+              Aplicação prática comprovada em Salobo III nas estruturas críticas de HPGR e Moagem pesada.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <!-- NDT 1: Pacometria -->
+            <div class="glass-panel p-5 rounded-2xl border border-slate-800">
+              <div class="flex items-center gap-3 mb-2">
+                <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center text-sm">
+                  <i class="fas fa-magnet"></i>
+                </div>
+                <h4 class="font-bold text-white text-base">Pacometria</h4>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Mapeamento eletromagnético de armaduras de aço, verificação de cobrimento de concreto e espaçamento real de barras nas fundações de moinhos.
+              </p>
+            </div>
+
+            <!-- NDT 2: Esclerometria -->
+            <div class="glass-panel p-5 rounded-2xl border border-slate-800">
+              <div class="flex items-center gap-3 mb-2">
+                <div class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-sm">
+                  <i class="fas fa-hammer"></i>
+                </div>
+                <h4 class="font-bold text-white text-base">Esclerometria</h4>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Determinação do índice esclerométrico para avaliação da dureza superficial e uniformidade da resistência à compressão do concreto in-situ.
+              </p>
+            </div>
+
+            <!-- NDT 3: Ultrassom de Concreto -->
+            <div class="glass-panel p-5 rounded-2xl border border-slate-800">
+              <div class="flex items-center gap-3 mb-2">
+                <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-sm">
+                  <i class="fas fa-wave-square"></i>
+                </div>
+                <h4 class="font-bold text-white text-base">Ultrassom de Concreto</h4>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Medição da velocidade de propagação de pulsos ultrassônicos para detecção de fissuras profundas, vazios, falhas de concretagem e módulo dinâmico.
+              </p>
+            </div>
+
+            <!-- NDT 4: GPR (Ground Penetrating Radar) -->
+            <div class="glass-panel p-5 rounded-2xl border border-slate-800">
+              <div class="flex items-center gap-3 mb-2">
+                <div class="w-8 h-8 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center text-sm">
+                  <i class="fas fa-satellite-dish"></i>
+                </div>
+                <h4 class="font-bold text-white text-base">GPR Estrutural</h4>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Radar de penetração de solo e estruturas maciças para imageamento subsuperficial 3D, tubulações embutidas e integridade de base em HPGR.
+              </p>
+            </div>
+          </div>
+
+          <!-- Highlight Box -->
+          <div class="p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-xs text-slate-300 font-sans leading-relaxed">
+            <strong class="text-amber-400 block mb-1 font-mono font-bold">Tomada de Decisão com Base em Dados de Campo:</strong>
+            Emissão de relatórios diários de campo e planilhas técnicas com suporte direto aos diretores de obra e equipes de fiscalização em Salobo III.
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SKILLS & TECHNICAL COMPETENCIES MATRIX
+       ========================================================================= -->
+  <section id="habilidades" class="py-20 bg-slate-950/60 border-t border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-mono font-bold text-amber-400 tracking-widest uppercase mb-2 block">
+          // DOMÍNIO TÉCNICO & FERRAMENTAL
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white tracking-tight" data-i18n="skillsTitle">
+          Matriz de Habilidades & Ferramentas Técnicas
+        </h2>
+        <p class="text-sm sm:text-base text-slate-400 mt-2" data-i18n="skillsSubtitle">
+          Combinação de software especializado de engenharia, métodos de governança e soft skills de liderança.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Column 1: Software & Ferramentas -->
+        <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-slate-800">
+          <div class="flex items-center gap-3 mb-6 pb-4 border-b border-slate-800">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-lg">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <div>
+              <h3 class="font-heading font-bold text-lg text-white">Softwares & BI</h3>
+              <p class="text-xs text-slate-400 font-mono">Expertise Analítica</p>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between text-xs font-mono mb-1">
+                <span class="text-white font-semibold">MS Project (Nível Avançado)</span>
+                <span class="text-amber-400">95%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-amber-500 rounded-full w-[95%]"></div>
+              </div>
+              <span class="text-[11px] text-slate-400 mt-0.5 block">Pool de recursos, calendários múltiplos, linhas de base e CPM.</span>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-mono mb-1">
+                <span class="text-white font-semibold">Power BI (Nível Avançado)</span>
+                <span class="text-cyan-400">90%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-cyan-400 rounded-full w-[90%]"></div>
+              </div>
+              <span class="text-[11px] text-slate-400 mt-0.5 block">Dashboards executivos, modelagem DAX, relatórios de avanço físico.</span>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-mono mb-1">
+                <span class="text-white font-semibold">SAP ERP</span>
+                <span class="text-emerald-400">85%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-emerald-500 rounded-full w-[85%]"></div>
+              </div>
+              <span class="text-[11px] text-slate-400 mt-0.5 block">Apropriação de custos, pedidos, ordens de manutenção e suprimentos.</span>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-mono mb-1">
+                <span class="text-white font-semibold">Leitura de Desenhos Técnicos</span>
+                <span class="text-amber-400">95%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-amber-500 rounded-full w-[95%]"></div>
+              </div>
+              <span class="text-[11px] text-slate-400 mt-0.5 block">Plantas industriais civis, estruturais, eletromecânicas e hidráulicas.</span>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-mono mb-1">
+                <span class="text-white font-semibold">Pacote Office / Excel Avançado</span>
+                <span class="text-cyan-400">95%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-cyan-400 rounded-full w-[95%]"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: Planejamento & Métodos -->
+        <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-slate-800">
+          <div class="flex items-center gap-3 mb-6 pb-4 border-b border-slate-800">
+            <div class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-lg">
+              <i class="fas fa-chart-pie"></i>
+            </div>
+            <div>
+              <h3 class="font-heading font-bold text-lg text-white">Planejamento & Controle</h3>
+              <p class="text-xs text-slate-400 font-mono">Governança Contratual</p>
+            </div>
+          </div>
+
+          <div class="space-y-3 font-mono text-xs">
+            <div class="p-2.5 rounded-lg bg-slate-900/80 border border-slate-800 flex items-center gap-2">
+              <i class="fas fa-check text-amber-400 text-xs"></i>
+              <span class="text-slate-200">Curva "S" Física e Financeira</span>
+            </div>
+            <div class="p-2.5 rounded-lg bg-slate-900/80 border border-slate-800 flex items-center gap-2">
+              <i class="fas fa-check text-amber-400 text-xs"></i>
+              <span class="text-slate-200">EAP / WBS método PERT/CPM</span>
+            </div>
+            <div class="p-2.5 rounded-lg bg-slate-900/80 border border-slate-800 flex items-center gap-2">
+              <i class="fas fa-check text-amber-400 text-xs"></i>
+              <span class="text-slate-200">Boletins de Medição (BM) Auditáveis</span>
+            </div>
+            <div class="p-2.5 rounded-lg bg-slate-900/80 border border-slate-800 flex items-center gap-2">
+              <i class="fas fa-check text-amber-400 text-xs"></i>
+              <span class="text-slate-200">Histograma Executivo & Reajustado</span>
+            </div>
+            <div class="p-2.5 rounded-lg bg-slate-900/80 border border-slate-800 flex items-center gap-2">
+              <i class="fas fa-check text-amber-400 text-xs"></i>
+              <span class="text-slate-200">Planejamento por Custo e por HH</span>
+            </div>
+            <div class="p-2.5 rounded-lg bg-slate-900/80 border border-slate-800 flex items-center gap-2">
+              <i class="fas fa-check text-amber-400 text-xs"></i>
+              <span class="text-slate-200">Relatório Diário de Obras (RDO)</span>
+            </div>
+            <div class="p-2.5 rounded-lg bg-slate-900/80 border border-slate-800 flex items-center gap-2">
+              <i class="fas fa-check text-amber-400 text-xs"></i>
+              <span class="text-slate-200">Segmento de Manutenção Industrial</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 3: Soft Skills & Idiomas -->
+        <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-slate-800">
+          <div class="flex items-center gap-3 mb-6 pb-4 border-b border-slate-800">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg">
+              <i class="fas fa-users-cog"></i>
+            </div>
+            <div>
+              <h3 class="font-heading font-bold text-lg text-white">Liderança & Idiomas</h3>
+              <p class="text-xs text-slate-400 font-mono">Soft Skills & Comunicação</p>
+            </div>
+          </div>
+
+          <!-- Language Highlight -->
+          <div class="p-4 rounded-xl bg-gradient-to-r from-slate-900 to-amber-950/40 border border-amber-500/40 mb-5">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2.5">
+                <i class="fas fa-language text-amber-400 text-xl"></i>
+                <span class="font-bold text-white text-sm">Inglês Fluente</span>
+              </div>
+              <span class="text-xs font-mono px-2 py-0.5 rounded bg-amber-500/20 text-amber-300">Fluency</span>
+            </div>
+            <p class="text-xs text-slate-300 mt-1">Capacidade de atuar em projetos internacionais, interfaces com fornecedores globais e leitura técnica.</p>
+          </div>
+
+          <!-- Soft Skills Badges -->
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-xs font-mono border border-slate-700">Liderança Operacional</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-xs font-mono border border-slate-700">Gestão de Stakeholders</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-xs font-mono border border-slate-700">Comunicação Assertiva</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-xs font-mono border border-slate-700">Ciclo PDCA & 5S</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-xs font-mono border border-slate-700">Metodologias Ágeis</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-xs font-mono border border-slate-700">Produtividade & Estratégia</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-xs font-mono border border-slate-700">Altruísmo & Trabalho em Equipe</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       ACADEMIC FOUNDATION & CERTIFICATIONS
+       ========================================================================= -->
+  <section id="formacao" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-mono font-bold text-amber-400 tracking-widest uppercase mb-2 block">
+          // QUALIFICAÇÃO ACADÊMICA DE ELITE
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white tracking-tight" data-i18n="eduTitle">
+          Formação Acadêmica & Capacitações
+        </h2>
+        <p class="text-sm sm:text-base text-slate-400 mt-2" data-i18n="eduSubtitle">
+          Trajetória acadêmica de excelência nas principais instituições do Brasil.
+        </p>
+      </div>
+
+      <!-- Degrees Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        
+        <!-- Degree 1: M. Eng PUC Minas -->
+        <div class="glass-panel p-8 rounded-2xl border-2 border-amber-500/40 relative overflow-hidden group">
+          <div class="absolute top-0 right-0 px-3 py-1 bg-amber-500 text-black text-[10px] font-mono font-bold uppercase rounded-bl-xl">
+            M. Eng.
+          </div>
+          <span class="text-xs font-mono text-amber-400 block mb-2">2023 a 2025 • PUC MINAS – MG (EAD)</span>
+          <h3 class="text-xl font-bold text-white mb-2 group-hover:text-amber-400 transition-colors">
+            M. Eng. em Engenharia de Planejamento & BI
+          </h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Mestrado Profissional focado em Business Intelligence, analytics para construção civil, governança de prazos, custos e otimização de cronogramas integrados.
+          </p>
+        </div>
+
+        <!-- Degree 2: MBA USP / ESALQ -->
+        <div class="glass-panel p-8 rounded-2xl border border-slate-800 hover:border-cyan-500/40 transition-colors relative overflow-hidden group">
+          <div class="absolute top-0 right-0 px-3 py-1 bg-cyan-500 text-black text-[10px] font-mono font-bold uppercase rounded-bl-xl">
+            MBA
+          </div>
+          <span class="text-xs font-mono text-cyan-400 block mb-2">2021 a 2023 • USP/ESALQ – SP (EAD)</span>
+          <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+            MBA – Gestão de Projetos
+          </h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Formação executiva pelo prestigiado Pecege/USP abordando áreas de conhecimento do PMI, gestão de riscos, governança orçamentária e liderança estratégica.
+          </p>
+        </div>
+
+        <!-- Degree 3: Graduação CEULS / ULBRA -->
+        <div class="glass-panel p-8 rounded-2xl border border-slate-800 hover:border-slate-700 transition-colors relative overflow-hidden group">
+          <div class="absolute top-0 right-0 px-3 py-1 bg-slate-800 text-slate-300 text-[10px] font-mono font-bold uppercase rounded-bl-xl">
+            Bacharelado
+          </div>
+          <span class="text-xs font-mono text-slate-400 block mb-2">2014 a 2018 • CEULS/ULBRA – PA (Presencial)</span>
+          <h3 class="text-xl font-bold text-white mb-2 group-hover:text-white transition-colors">
+            Bacharelado em Engenharia Civil
+          </h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Formação presencial completa em engenharia de estruturas, geotecnia, materiais de construção, hidrologia, instalações elétricas e gestão de canteiro.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Certifications & Specialized Training Strip -->
+      <div class="glass-panel p-8 rounded-3xl border border-slate-800">
+        <h3 class="text-lg font-heading font-bold text-white mb-6 flex items-center gap-2">
+          <i class="fas fa-award text-amber-400"></i>
+          <span>Capacitações Específicas & Certificações Técnicas</span>
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+          
+          <div class="p-5 rounded-xl bg-slate-900/80 border border-slate-800 space-y-2">
+            <span class="text-xs font-mono text-amber-400 font-bold block">CAV – Soluções Técnicas e Empresariais</span>
+            <h4 class="font-bold text-white text-base">Treinamento Avançado em Planejamento</h4>
+            <ul class="text-xs text-slate-400 space-y-1 pt-2 border-t border-slate-800 font-sans">
+              <li>• Planejamento por Custo & por HH</li>
+              <li>• Elaboração e Controle de EAP</li>
+              <li>• Histogramas Executivo e Reajustado</li>
+              <li>• Organização de Controle de Ação & Interfaces</li>
+            </ul>
+          </div>
+
+          <div class="p-5 rounded-xl bg-slate-900/80 border border-slate-800 space-y-2">
+            <span class="text-xs font-mono text-cyan-400 font-bold block">Pecege - Solutions</span>
+            <h4 class="font-bold text-white text-base">MS Project 2016 Avançado</h4>
+            <ul class="text-xs text-slate-400 space-y-1 pt-2 border-t border-slate-800 font-sans">
+              <li>• Calendário, tarefas, EAP e Recursos</li>
+              <li>• Monitoramento e Controle rigoroso</li>
+              <li>• Gerenciamento de Múltiplos Projetos</li>
+              <li>• Pool de Recursos Corporativo</li>
+            </ul>
+          </div>
+
+          <div class="p-5 rounded-xl bg-slate-900/80 border border-slate-800 space-y-2">
+            <span class="text-xs font-mono text-emerald-400 font-bold block">LinkedIn Learning</span>
+            <h4 class="font-bold text-white text-base">Gestão Ágil no Trabalho</h4>
+            <ul class="text-xs text-slate-400 space-y-1 pt-2 border-t border-slate-800 font-sans">
+              <li>• Criação e liderança de equipes ágeis</li>
+              <li>• Frameworks e modelos ágeis</li>
+              <li>• Aplicação tática de estratégia</li>
+              <li>• Espaço de trabalho colaborativo</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       CONTACT & FAST CONNECT
+       ========================================================================= -->
+  <section id="contato" class="py-24 bg-slate-950 border-t border-slate-800 relative">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      
+      <span class="text-xs font-mono font-bold text-amber-400 tracking-widest uppercase mb-2 block">
+        // DISPONIBILIDADE IMEDIATA PARA PROJETOS
+      </span>
+      <h2 class="text-3xl sm:text-5xl font-heading font-black text-white tracking-tight" data-i18n="contactTitle">
+        Conecte-se com Felipe Farias Santana
+      </h2>
+      <p class="text-base sm:text-lg text-slate-300 mt-4 max-w-2xl mx-auto leading-relaxed" data-i18n="contactSubtitle">
+        Disponível para novas oportunidades estratégicas, consultorias de planejamento e projetos industriais com disponibilidade total para viagens.
+      </p>
+
+      <!-- Contact Action Cards -->
+      <div class="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
+        
+        <!-- WhatsApp Card -->
+        <a id="contact-whatsapp-btn" href="https://wa.me/5593991515807" target="_blank" class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-emerald-500/60 transition-all group block">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+            <i class="fab fa-whatsapp"></i>
+          </div>
+          <span class="text-xs font-mono text-slate-400 block">WhatsApp Direto</span>
+          <span class="text-lg font-bold text-white block mt-1">(93) 99151-5807</span>
+          <span class="text-xs text-emerald-400 mt-2 inline-flex items-center gap-1 font-mono">
+            <span>Conversar agora</span>
+            <i class="fas fa-arrow-right text-[10px]"></i>
+          </span>
+        </a>
+
+        <!-- Email Card -->
+        <a href="mailto:felipe.engmdc@gmail.com" class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-amber-500/60 transition-all group block">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <span class="text-xs font-mono text-slate-400 block">E-mail Corporativo</span>
+          <span class="text-sm sm:text-base font-bold text-white block mt-1 break-all">felipe.engmdc@gmail.com</span>
+          <span class="text-xs text-amber-400 mt-2 inline-flex items-center gap-1 font-mono">
+            <span>Enviar mensagem</span>
+            <i class="fas fa-arrow-right text-[10px]"></i>
+          </span>
+        </a>
+
+        <!-- Location & Availability Card -->
+        <div class="glass-panel p-6 rounded-2xl border border-slate-800">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-2xl mb-4">
+            <i class="fas fa-compass"></i>
+          </div>
+          <span class="text-xs font-mono text-slate-400 block">Base Operacional & Viagens</span>
+          <span class="text-base font-bold text-white block mt-1">Parauapebas / Canaã dos Carajás, PA</span>
+          <span class="text-xs text-cyan-400 mt-2 block font-mono">Disponível para Viagens • CNH AB</span>
+        </div>
+
+      </div>
+
+      <!-- Print Resume Banner -->
+      <div class="mt-12 p-6 rounded-2xl bg-slate-900/90 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="text-left">
+          <h4 class="text-white font-bold text-base">Precisa do currículo formatado para arquivamento ou RH?</h4>
+          <p class="text-xs text-slate-400">Gere uma versão limpa para PDF pronta para impressão com 1 clique.</p>
+        </div>
+        <button onclick="window.print()" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-mono text-xs font-bold border border-slate-700 hover:border-amber-500 transition-colors cursor-pointer shrink-0 flex items-center gap-2">
+          <i class="fas fa-file-pdf text-amber-400"></i>
+          <span>Gerar PDF / Imprimir</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 bg-slate-950 border-t border-slate-900 text-center text-xs font-mono text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        <span class="text-white font-bold">Felipe Farias Santana</span> • CREA 151832597-1PA
+      </div>
+      <div>
+        Engenharia Civil • Gestão de Projetos • Planejamento & BI
+      </div>
+      <div>
+        &copy; 2026 Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       FLOATING WHATSAPP BUTTON
+       ========================================================================= -->
+  <a id="floating-whatsapp-btn" href="https://wa.me/5593991515807" target="_blank" class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white flex items-center justify-center text-2xl shadow-2xl shadow-emerald-500/50 hover:scale-110 transition-all duration-300" title="Conversar no WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- =========================================================================
+       MODAL: TECHNICAL EXPERIENCE DEEP DIVE
+       ========================================================================= -->
+  <div id="experience-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden items-center justify-center p-4 sm:p-6">
+    <div class="glass-panel w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-3xl p-6 sm:p-8 border border-slate-700 shadow-2xl relative">
+      <button onclick="closeExperienceModal()" class="absolute top-6 right-6 w-10 h-10 rounded-full bg-slate-800 text-slate-300 hover:text-white flex items-center justify-center hover:bg-slate-700 transition-colors">
+        <i class="fas fa-times text-lg"></i>
+      </button>
+
+      <div id="modal-body">
+        <!-- Conteúdo preenchido dinamicamente via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Controller -->
+  <script src="app.js"></script>
+</body>
+</html>
